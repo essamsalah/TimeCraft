@@ -1,0 +1,23 @@
+<style>
+  .panel { width: 352px; flex-direction: column; padding: 16px; gap: 5px; }
+  .brand { color: #79582c; font-size: 13px; font-weight: 700; }
+  .step { color: #192a32; font-size: 23px; font-weight: 700; }
+  .copy { color: #344750; font-size: 15px; min-height: 38px; }
+  .actions { flex-direction: row; justify-content: flex-end; gap: 6px; }
+  .rail { width: 320px; height: 4px; background-color: #dce4df; }
+  .fill { width: 0px; height: 4px; background-color: #947047; }
+</style>
+<Panel class="panel">
+  <span id="brand" class="brand">TIMECRAFT MR</span>
+  <span id="step" class="step">1 / 9   Install the dial</span>
+  <span id="guidance" class="copy">Pinch the highlighted dial.</span>
+  <div class="rail"><div id="progress" class="fill"></div></div>
+  <div class="actions">
+    <Button id="place"><ButtonLabel>Recenter</ButtonLabel></Button>
+    <Button id="start"><ButtonLabel>Begin</ButtonLabel></Button>
+    <Button id="wind" style="display: none"><ButtonLabel>Wind one turn</ButtonLabel></Button>
+    <Button id="skip" style="display: none"><ButtonLabel>Skip reveal</ButtonLabel></Button>
+    <Button id="exit"><ButtonLabel>Exit XR</ButtonLabel></Button>
+    <Button id="restart" style="display: none"><ButtonLabel>Restart</ButtonLabel></Button>
+  </div>
+</Panel>

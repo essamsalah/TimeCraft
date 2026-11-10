@@ -1,0 +1,467 @@
+{
+  "version": "iwsdk.scene.v1",
+  "units": "meters",
+  "components": {
+    "com.iwsdk.components.IBLGradient": {
+      "sky": [
+        0.88,
+        0.91,
+        1,
+        1
+      ],
+      "equator": [
+        0.76,
+        0.71,
+        0.63,
+        1
+      ],
+      "ground": [
+        0.28,
+        0.25,
+        0.22,
+        1
+      ],
+      "intensity": 1.15
+    }
+  },
+  "resources": {},
+  "nodes": [
+    {
+      "id": "station-root",
+      "name": "Watchmaking Station",
+      "content": {
+        "type": "group"
+      },
+      "children": [
+        {
+          "id": "workbench",
+          "name": "Assembly Workbench",
+          "content": {
+            "type": "asset",
+            "asset": "watch-station"
+          },
+          "transform": {
+            "position": [
+              0,
+              1.152,
+              -0.62
+            ]
+          }
+        },
+        {
+          "id": "parts-tray",
+          "name": "Parts Tray",
+          "content": {
+            "type": "asset",
+            "asset": "station-tray"
+          },
+          "transform": {
+            "position": [
+              0.217,
+              1.154,
+              -0.613
+            ],
+            "scale": [
+              1.39,
+              1,
+              1.47
+            ]
+          }
+        },
+        {
+          "id": "watch-case",
+          "name": "Watch Case",
+          "content": {
+            "type": "asset",
+            "asset": "open-case"
+          },
+          "transform": {
+            "position": [
+              -0.235,
+              1.173,
+              -0.595
+            ]
+          },
+          "components": {
+            "AudioSource": {
+              "src": "./audio/first-tick.wav",
+              "volume": 0.23,
+              "maxInstances": 1
+            }
+          },
+          "children": [
+            {
+              "id": "watch-movement",
+              "name": "Watch Movement",
+              "content": {
+                "type": "asset",
+                "asset": "open-movement"
+              },
+              "transform": {
+                "position": [
+                  0.235,
+                  -0.006,
+                  -0.025
+                ]
+              },
+              "components": {
+                "AssemblyPart": {},
+                "WatchProgress": {}
+              },
+              "children": [
+                {
+                  "id": "watch-dial",
+                  "name": "Watch Dial",
+                  "content": {
+                    "type": "asset",
+                    "asset": "open-dial"
+                  },
+                  "transform": {
+                    "position": [
+                      0.219,
+                      -0.001,
+                      -0.064
+                    ]
+                  },
+                  "components": {
+                    "AssemblyPart": {}
+                  }
+                },
+                {
+                  "id": "hour-hand",
+                  "name": "Hour Hand",
+                  "content": {
+                    "type": "asset",
+                    "asset": "hour-hand"
+                  },
+                  "transform": {
+                    "position": [
+                      0.132,
+                      -0.001,
+                      0.102
+                    ],
+                    "scale": 1.55
+                  },
+                  "components": {
+                    "AssemblyPart": {}
+                  }
+                },
+                {
+                  "id": "minute-hand",
+                  "name": "Minute Hand",
+                  "content": {
+                    "type": "asset",
+                    "asset": "minute-hand"
+                  },
+                  "transform": {
+                    "position": [
+                      0.219,
+                      -0.001,
+                      0.109
+                    ],
+                    "scale": 1.65
+                  },
+                  "components": {
+                    "AssemblyPart": {}
+                  }
+                },
+                {
+                  "id": "seconds-hand",
+                  "name": "Seconds Hand",
+                  "content": {
+                    "type": "asset",
+                    "asset": "seconds-hand"
+                  },
+                  "transform": {
+                    "position": [
+                      0.304,
+                      -0.001,
+                      0.117
+                    ],
+                    "scale": 2.05
+                  },
+                  "components": {
+                    "AssemblyPart": {}
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "movement-holder",
+          "name": "Movement Holder",
+          "content": {
+            "type": "asset",
+            "asset": "movement-holder"
+          },
+          "transform": {
+            "position": [
+              0,
+              1.153,
+              -0.62
+            ]
+          }
+        },
+        {
+          "id": "alignment-ring",
+          "name": "Alignment Indicator",
+          "content": {
+            "type": "asset",
+            "asset": "alignment-ring"
+          },
+          "transform": {
+            "position": [
+              0,
+              1.206,
+              -0.62
+            ]
+          }
+        },
+        {
+          "id": "active-part-halo",
+          "name": "Active Part Highlight",
+          "content": {
+            "type": "asset",
+            "asset": "active-part-halo"
+          },
+          "transform": {
+            "position": [
+              0,
+              1.166,
+              -0.62
+            ]
+          }
+        },
+        {
+          "id": "watch-steps",
+          "name": "Assembly Instructions",
+          "content": {
+            "type": "asset",
+            "asset": "studio-panel"
+          },
+          "transform": {
+            "position": [
+              0,
+              1.49,
+              -0.92
+            ],
+            "scale": 0.29
+          },
+          "components": {
+            "RayInteractable": {}
+          }
+        },
+        {
+          "id": "crown",
+          "name": "Winding Crown",
+          "content": {
+            "type": "asset",
+            "asset": "winding-crown"
+          },
+          "transform": {
+            "position": [
+              0.219,
+              1.166,
+              -0.684
+            ]
+          },
+          "components": {
+            "AssemblyPart": {}
+          }
+        },
+        {
+          "id": "case-back",
+          "name": "Case Back",
+          "content": {
+            "type": "asset",
+            "asset": "exhibition-back"
+          },
+          "transform": {
+            "position": [
+              0.217,
+              1.178,
+              -0.612
+            ]
+          },
+          "components": {
+            "AssemblyPart": {}
+          }
+        },
+        {
+          "id": "bracelet-front",
+          "name": "Front Bracelet",
+          "content": {
+            "type": "asset",
+            "asset": "bracelet-section"
+          },
+          "transform": {
+            "position": [
+              0.153,
+              1.2,
+              -0.642
+            ]
+          },
+          "components": {
+            "AssemblyPart": {}
+          }
+        },
+        {
+          "id": "bracelet-rear",
+          "name": "Rear Bracelet",
+          "content": {
+            "type": "asset",
+            "asset": "bracelet-section"
+          },
+          "transform": {
+            "position": [
+              0.279,
+              1.2,
+              -0.642
+            ]
+          },
+          "components": {
+            "AssemblyPart": {}
+          }
+        },
+        {
+          "id": "metal-click",
+          "name": "Metallic Seat Click",
+          "transform": {
+            "position": [
+              -0.235,
+              1.2,
+              -0.595
+            ]
+          },
+          "components": {
+            "AudioSource": {
+              "src": "./audio/seat-click.wav",
+              "volume": 0.38,
+              "maxInstances": 1
+            }
+          }
+        },
+        {
+          "id": "watch-tick",
+          "name": "Watch Tick",
+          "transform": {
+            "position": [
+              -0.235,
+              1.38,
+              -0.595
+            ]
+          },
+          "components": {
+            "AudioSource": {
+              "src": "./audio/watch-tick.wav",
+              "volume": 0.24,
+              "maxInstances": 1
+            }
+          }
+        },
+        {
+          "id": "gesture-demo",
+          "name": "Pinch and Place Demo",
+          "content": {
+            "type": "asset",
+            "asset": "gesture-demo"
+          },
+          "transform": {
+            "position": [
+              0.095,
+              1.157,
+              -0.5
+            ]
+          }
+        },
+        {
+          "id": "pickup-audio",
+          "name": "Pickup Feedback",
+          "transform": {
+            "position": [
+              0,
+              1.22,
+              -0.61
+            ]
+          },
+          "components": {
+            "AudioSource": {
+              "src": "./audio/soft-pickup.wav",
+              "volume": 0.14,
+              "maxInstances": 1
+            }
+          }
+        },
+        {
+          "id": "wind-audio",
+          "name": "Winding Ratchet",
+          "transform": {
+            "position": [
+              0,
+              1.22,
+              -0.61
+            ]
+          },
+          "components": {
+            "AudioSource": {
+              "src": "./audio/watch-tick.wav",
+              "volume": 0.13,
+              "maxInstances": 1
+            }
+          }
+        },
+        {
+          "id": "studio-detail",
+          "name": "Watchmaker Tools",
+          "content": {
+            "type": "asset",
+            "asset": "studio-detail"
+          },
+          "transform": {
+            "position": [
+              -0.331,
+              1.155,
+              -0.64
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "immersive-workshop",
+      "name": "Immersive Workshop",
+      "content": {
+        "type": "asset",
+        "asset": "immersive-workshop"
+      },
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  ],
+  "authoring": {
+    "views": [
+      {
+        "id": "hero",
+        "role": "hero",
+        "projection": "perspective",
+        "position": [
+          0.27,
+          1.68,
+          0.19
+        ],
+        "target": [
+          0.02,
+          1.26,
+          -0.62
+        ],
+        "fov": 45
+      }
+    ]
+  }
+}

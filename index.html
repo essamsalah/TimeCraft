@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="data:," />
+    <title>TimeCraft MR</title>
+    <style>
+      #xr-entry {
+        position: fixed;
+        left: 50%;
+        bottom: 28px;
+        transform: translateX(-50%);
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      #xr-enter-btn {
+        font-size: 19px;
+        padding: 16px 34px;
+        border-radius: 999px;
+        border: none;
+        background: #d9a03a;
+        color: #10131a;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.55);
+      }
+      #xr-enter-btn:disabled {
+        background: #4a4f5c;
+        color: #9aa1b2;
+        cursor: default;
+      }
+      #xr-status {
+        color: #cfd6e4;
+        background: rgba(16, 19, 26, 0.75);
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 13px;
+        max-width: 78vw;
+        text-align: center;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-Cwn27b1H.js"></script>
+  </head>
+  <body style="margin: 0">
+    <div id="scene-container"></div>
+    <div id="xr-entry">
+      <button id="xr-enter-btn" disabled>Checking WebXR…</button>
+      <div id="xr-status"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!-- TimeCraft MR — compact status panel above the workbench. -->
+<style>
+  .panel-root {
+    flex-direction: column;
+    width: 380px;
+  }
+  .panel-content {
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px;
+    padding-bottom: 6px;
+  }
+  .progress {
+    color: #f5d90a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+  .step {
+    color: #fafaf7;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    min-height: 28px;
+  }
+  .env {
+    color: #8a8f98;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+  .button-row {
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    padding-top: 2px;
+  }
+  .small-button {
+    flex-grow: 1;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="panel-content">
+    <div id="progress-label" class="progress">WELCOME</div>
+    <div id="step-label" class="step">TimeCraft MR</div>
+    <div id="env-label" class="env">Mixed reality · Auto graphics</div>
+  </div>
+  <div class="button-row">
+    <Button id="restart-button" class="small-button">
+      <ButtonLabel>Restart</ButtonLabel>
+    </Button>
+    <Button id="recenter-button" class="small-button">
+      <ButtonLabel>Recenter</ButtonLabel>
+    </Button>
+  </div>
+</Panel>

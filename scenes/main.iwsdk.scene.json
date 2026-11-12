@@ -1,0 +1,160 @@
+{
+  "components": {
+    "com.iwsdk.components.IBLGradient": {
+      "equator": [
+        0.8,
+        0.76,
+        0.7,
+        1
+      ],
+      "ground": [
+        0.46,
+        0.42,
+        0.38,
+        1
+      ],
+      "intensity": 0.3,
+      "sky": [
+        0.96,
+        0.94,
+        0.9,
+        1
+      ]
+    }
+  },
+  "environment": {
+    "exposure": 1,
+    "shadowMapType": "pcf",
+    "shadows": true,
+    "toneMapping": "aces"
+  },
+  "nodes": [
+    {
+      "components": {
+        "ShadowCatcher": {
+          "opacity": 0.22,
+          "size": [
+            3,
+            3
+          ]
+        }
+      },
+      "framingRole": "support",
+      "id": "shadow-catcher",
+      "name": "Shadow Catcher",
+      "transform": {
+        "position": [
+          0,
+          0.001,
+          -0.6
+        ]
+      }
+    },
+    {
+      "components": {
+        "PokeInteractable": {},
+        "RayInteractable": {}
+      },
+      "content": {
+        "asset": "welcome-panel",
+        "type": "asset"
+      },
+      "id": "welcome-panel",
+      "name": "Welcome Panel",
+      "transform": {
+        "position": [
+          0,
+          1.38,
+          -1.05
+        ],
+        "rotationDeg": [
+          -4,
+          0,
+          0
+        ],
+        "scale": 0.3
+      }
+    },
+    {
+      "components": {},
+      "content": {
+        "asset": "status-panel",
+        "type": "asset"
+      },
+      "id": "status-panel",
+      "name": "Status Panel",
+      "transform": {
+        "position": [
+          -0.38,
+          1.0,
+          -0.58
+        ],
+        "rotationDeg": [
+          -10,
+          24,
+          0
+        ],
+        "scale": 0.2
+      }
+    },
+    {
+      "components": {
+        "DirectionalLight": {
+          "castShadow": true,
+          "color": [
+            1,
+            0.945,
+            0.87,
+            1
+          ],
+          "intensity": 2,
+          "shadowBias": -0.0004,
+          "shadowCameraFar": 24,
+          "shadowCameraNear": 2,
+          "shadowCameraSize": 6,
+          "shadowMapSize": "1024",
+          "shadowNormalBias": 0.02,
+          "shadowRadius": 5
+        }
+      },
+      "id": "key-light",
+      "name": "Key Light",
+      "transform": {
+        "position": [
+          -2.3541,
+          11.2763,
+          1.762
+        ],
+        "rotationDeg": [
+          -73.3982,
+          -11.3134,
+          0
+        ]
+      }
+    },
+    {
+      "components": {
+        "HemisphereLight": {
+          "groundColor": [
+            0.55,
+            0.52,
+            0.48,
+            1
+          ],
+          "intensity": 1,
+          "skyColor": [
+            0.96,
+            0.94,
+            0.9,
+            1
+          ]
+        }
+      },
+      "id": "fill-light",
+      "name": "Fill Light"
+    }
+  ],
+  "resources": {},
+  "units": "meters",
+  "version": "iwsdk.scene.v1"
+}

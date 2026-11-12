@@ -1,0 +1,47 @@
+<!-- TimeCraft MR — welcome/onboarding panel. -->
+<style>
+  .panel-root {
+    flex-direction: column;
+    width: 420px;
+  }
+  .panel-content {
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+  }
+  .eyebrow {
+    color: #f5d90a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .heading {
+    color: #fafaf7;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+  .body {
+    color: #c9cdd4;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .button {
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+</style>
+<Panel class="panel-root">
+  <div class="panel-content">
+    <div class="eyebrow">TIMECRAFT MR</div>
+    <div class="heading">Build time with your own hands.</div>
+    <div class="body">Assemble a mechanical watch on your workbench.</div>
+    <div class="body">Pick up each highlighted part, bring it to the glowing</div>
+    <div class="body">target, and let go. Finish by winding the crown.</div>
+  </div>
+  <Button id="start-button" class="button">
+    <ButtonLabel>Start building</ButtonLabel>
+  </Button>
+</Panel>
